@@ -4,7 +4,6 @@ import data from "./Books/fantasy.json";
 
 
 export default function AllTheBooks(props) {
-    // const {img} = props;
     console.log("i libri sono:");
     console.log(data);
   return (
