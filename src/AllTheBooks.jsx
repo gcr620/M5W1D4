@@ -1,6 +1,6 @@
 import React from 'react'
 import Card from 'react-bootstrap/Card';
-import fantasy from "./fantasy.json";
+import "./Books/fantasy.json";
 
 window.onload = () => {
     getBooks()
@@ -8,12 +8,9 @@ window.onload = () => {
 
 async function getBooks() {
     try {
-        let res = await fetch("fantasy.json", {
-            headers: {
-                "Content-type": "application/json;charset=UTF-8"
-            }
-        })
-        let raw = await res.json()
+        let res = await fetch("./Books/fantasy.json")
+        console.log(res);
+        let raw = res.json();
         console.log(raw);
     } catch (error) {
         alert('Errore nel Get')
