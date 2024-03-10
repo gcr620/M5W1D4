@@ -7,7 +7,6 @@ import Welcome from './Welcome'
 import AllTheBooks from './AllTheBooks'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-import data from "./Books/fantasy.json";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
