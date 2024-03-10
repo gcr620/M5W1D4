@@ -19,4 +19,11 @@ code {
 
 div.card{
   padding: 0px;
+  /* width: 200px; */
+  height: 300px;
+}
+div.card img{
+  width: 200px;
+  height: 100%;
+  
 }

@@ -1,30 +1,21 @@
 import React from 'react'
 import Card from 'react-bootstrap/Card';
-import "./Books/fantasy.json";
+import data from "./Books/fantasy.json";
 
-window.onload = () => {
-    getBooks()
-}
 
-async function getBooks() {
-    try {
-        let res = await fetch("./Books/fantasy.json")
-        console.log(res);
-        let raw = res.json();
-        console.log(raw);
-    } catch (error) {
-        alert('Errore nel Get')
-    }
-}
-
-export default function AllTheBooks() {
+export default function AllTheBooks(props) {
+    // const {img} = props;
+    console.log("i libri sono:");
+    console.log(data);
   return (
     <div className='container'>
-        <div className='row row-cols-auto'>
-            <Card>
-                <Card.Img variant="top" src="https://images.pexels.com/photos/1029141/pexels-photo-1029141.jpeg?auto=compress&cs=tinysrgb&w=600" alt='BOOK'>
-                </Card.Img>    
-            </Card>
+        <div className='row row-cols-auto justify-content-between align-items-center gap-2'>
+               {data.map((el, index) => (
+                <Card>
+                   <Card.Img key={index} variant="top" src={el.img} alt='BOOK'>
+                   </Card.Img>   
+                </Card>
+               ))}     
         </div>
     </div>
   )
