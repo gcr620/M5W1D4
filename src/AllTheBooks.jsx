@@ -1,7 +1,14 @@
 import React from 'react'
-import Card from 'react-bootstrap/Card';
 import data from "./Books/fantasy.json";
+import SingleBook from './SingleBook';
 
+// {
+//     "asin": "0316438960",
+//     "title": "The Last Wish: Introducing the Witcher",
+//     "img": "https://images-na.ssl-images-amazon.com/images/I/51eHtkVLL5L.jpg",
+//     "price": 9.59,
+//     "category": "fantasy"
+//   },
 
 export default function AllTheBooks(props) {
     console.log("i libri sono:");
@@ -10,10 +17,7 @@ export default function AllTheBooks(props) {
     <div className='container'>
         <div className='row row-cols-auto justify-content-between align-items-center gap-2'>
                {data.map((el, index) => (
-                <Card>
-                   <Card.Img key={index} variant="top" src={el.img} alt='BOOK'>
-                   </Card.Img>   
-                </Card>
+                <SingleBook title={el.title} img={el.img} price={el.price} category={props.category} id={el.asin}/>
                ))}     
         </div>
     </div>

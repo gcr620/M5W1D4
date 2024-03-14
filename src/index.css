@@ -19,11 +19,15 @@ code {
 
 div.card{
   padding: 0px;
-  /* width: 200px; */
-  height: 300px;
+  width: 200px;
+  height: 500px;
 }
 div.card img{
   width: 200px;
-  height: 100%;
+  min-height: 300px;
+  max-height: 300px;
   
+}
+div.card-title{
+  max-height: 50%;
 }
