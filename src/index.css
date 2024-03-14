@@ -17,6 +17,10 @@ code {
     monospace;
 }
 
+div.search{
+  width: 300px;
+}
+
 div.card{
   padding: 0px;
   width: 200px;
@@ -29,5 +33,9 @@ div.card img{
   
 }
 div.card-title{
-  max-height: 50%;
+  display: -webkit-box;
+  max-width: 155px;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }

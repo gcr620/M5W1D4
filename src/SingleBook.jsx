@@ -15,8 +15,7 @@ export default function SingleBook(props) {
       <Card.Body>
         <Card.Title>{props.title}</Card.Title>
         <Card.Text>
-         <p>€{props.price}</p>
-         <p>Category: {props.category}</p>
+         €{props.price}<br />Category: {props.category}
         </Card.Text>
       </Card.Body>
     </Card>
